@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// Configure Gradle for Java 21
+gradle.projectsLoaded {
+    println "Using Gradle version: ${gradle.gradleVersion}"
+}
+
+rootProject.name = "advanced-android-testing"
+include ':app'
