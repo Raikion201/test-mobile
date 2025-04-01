@@ -1,22 +1,81 @@
-TO-DO Notes - Code for 5.1-5.3 Testing Codelab
-============================================================================
+Collecting workspace information# TO-DO Notes - Testing Codelab
 
-Code for the Advanced Android Kotlin Testing Codelab 5.1-5.3
+## Overview
+A task management Android application that showcases testing best practices. This app allows users to create, organize, and track tasks with a clean, material design interface, demonstrating various Android architecture components and testing techniques.
 
-Introduction
-------------
+## Features
+- Create, edit and delete tasks
+- Mark tasks as complete or active
+- Filter tasks by their status (all, active, completed)
+- View task statistics
+- View detailed information about specific tasks
+- Data persistence through Room database
+- Clean architecture with separation of concerns
 
-TO-DO Notes is an app where you to write down tasks to complete. The app displays them in a list.
-You can then mark them as completed or not, filter them and delete them.
 
-![App main screen, screenshot](screenshot.png)
+## Technologies Used
+- Kotlin
+- Android Architecture Components
+- MVVM Design Pattern
+- LiveData and ViewModel
+- Navigation Component
+- Data Binding
+- Room Database
+- Coroutines for asynchronous operations
+- JUnit and Espresso for testing
 
-This codelab has four branches, representing different code states:
+## Prerequisites
+- Android Studio Hedgehog (2023.1.1) or newer
+- Android SDK version 21+
+- Gradle 8.2+
+- JDK 17+ (with Java 21 tools support)
+- AndroidX libraries
 
-* [starter_code](https://github.com/googlecodelabs/android-testing/tree/starter_code)
-* [end_codelab_1](https://github.com/googlecodelabs/android-testing/tree/end_codelab_1)
-* [end_codelab_2](https://github.com/googlecodelabs/android-testing/tree/end_codelab_2)
-* [end_codelab_3](https://github.com/googlecodelabs/android-testing/tree/end_codelab_3)
+## Setup Instructions
+
+### Clone the Repository
+```bash
+git clone https://github.com/googlecodelabs/android-testing.git
+cd android-testing
+```
+
+### Open and Build in Android Studio
+1. Open Android Studio
+2. Select "Open an existing Android Studio project"
+3. Navigate to the cloned repository and click "Open"
+4. Wait for the project to sync and build
+5. Connect an Android device or use the emulator
+
+### Run the Application
+- Click the "Run" button in Android Studio
+- Select a deployment target
+- The app will install and launch automatically
+
+## Project Structure
+```
+app/
+├── src/
+│   ├── main/
+│   │   ├── java/com/example/android/architecture/blueprints/todoapp/
+│   │   │   ├── data/                  # Data models and source classes
+│   │   │   ├── tasks/                 # Task list screen
+│   │   │   ├── taskdetail/            # Task detail screen
+│   │   │   ├── addedittask/           # Add/edit task screen
+│   │   │   ├── statistics/            # Statistics screen
+│   │   │   └── util/                  # Utility classes
+│   │   ├── res/                       # App resources
+│   │   └── AndroidManifest.xml        # App configuration
+│   ├── test/                          # Local unit tests
+│   └── androidTest/                   # Instrumented tests
+├── build.gradle                       # Project build configuration
+└── gradle.properties                  # Gradle configuration properties
+```
+
+## Testing Approach
+This project demonstrates different testing techniques:
+- **Unit tests**: Test individual components in isolation
+- **Integration tests**: Test interactions between components
+- **UI tests**: Test the app's user interface with Espresso
 
 The codelabs in this series are:
 * [Testing Basics](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-testing-basics)
@@ -24,41 +83,10 @@ The codelabs in this series are:
 * [Survey of Testing Topics](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-testing-survey)
 
 
-Pre-requisites
---------------
+## Contributing
+Please read CONTRIBUTING.md for details on how to contribute to this project.
 
-You should be familiar with:
+---
+*This app is part of the Android Developers Codelabs and demonstrates modern Android development techniques with a focus on testable architecture.*
 
-* The Kotlin programming language, including [Kotlin coroutines](https://developer.android.com/kotlin/coroutines) and their interaction with [Android Jetpack components](https://developer.android.com/topic/libraries/architecture/coroutines).
-* The following core Android Jetpack libraries: [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel),
- [LiveData](https://developer.android.com/topic/libraries/architecture/livedata),
-  [Navigation Component](https://developer.android.com/guide/navigation) and 
-  [Data Binding](https://developer.android.com/topic/libraries/data-binding).
-* Application architecture, following the pattern from the [Guide to app architecture](https://developer.android.com/jetpack/docs/guide) and [Android Fundamentals codelabs](https://developer.android.com/courses/kotlin-android-fundamentals/toc).
-
-
-Getting Started
----------------
-
-1. Download and run the app.
-2. Check out one of the codelabs mentioned above.
-
-License
--------
-
-Copyright 2019 Google, Inc.
-
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+Similar code found with 1 license type
